@@ -1,2 +1,2 @@
 # selenium-project
-Testing project on github using selenium java
+Testing project on github using selenium 
