@@ -1,0 +1,40 @@
+   project name : Sign in Automatically on LinkedIn
+   
+   
+   This project makes use of signing in websites and automating them using Selenium
+  
+  
+  
+  import time
+
+    from selenium import  webdriver
+
+    from selenium.webdriver.common.by import By                      
+
+    from selenium.webdriver.edge.service import Service
+
+    
+
+    s = Service("C:\Users\ASUS\Music\TESTING\edgedriver_win64\msedgedriver.exe")
+
+    browser = webdriver.Edge(service=s) 
+
+    
+
+    browser.get("https://www.linkedin.com")
+
+    username=browser.find_element(By.XPATH, '//*[@id="session_key"]')
+
+    username.send_keys("EMAIL")   #Enter Your Email
+
+    username=browser.find_element(By.XPATH,  '//*[@id="session_password"]')
+
+    username.send_keys("PASSWORD") #Enter Your Password
+
+    button=browser.find_element(By.XPATH, '//*[@id="main-content"]/section[1]/div/div/form/div[2]/button')
+
+    
+
+    time.sleep(2)
+
+    button.click()
